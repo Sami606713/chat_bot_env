@@ -52,12 +52,13 @@ def Response(text):
     return chat.last.text
 
 # Text pretify
-# def format_response(text):
-#     if("*" in text):
-#         text=text.replace("**","<h1>").replace("*","</h1>")+"\n"
-#     else:
-#         text=text.strip("```")+"\n"
-#     return text
+def format_response(text):
+   for i in text:
+    if(i.startswith("**")):
+        "<h1>"+i+"</h1>"
+    else:
+        "<pre>"+i+"</pre>"
+    return text
 
 
 # Open AI end
@@ -79,7 +80,7 @@ Processor understand only binary format"""
                 messages.append(response)
             else:
                 response=Response(user_input)
-                # response=format_response(res)
+                # response=format_response(response)
                 # response=Response(user_input)
                 messages.append(response)
 

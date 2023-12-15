@@ -87,14 +87,14 @@ body {
       </form>
         <div class="response">
           <ul>
+            <li style="
+            position: relative;
+            /* overflow: scroll; */
+            height: fit-content;
+            max-width: 100%;
+            text-wrap: balance;
+        ">
             {% for i in messages %}
-                <li style="
-                position: relative;
-                /* overflow: scroll; */
-                height: fit-content;
-                max-width: 100%;
-                text-wrap: balance;
-            ">
                     User: {{user_input}}<br>
                     <li><pre>{{i}}</pre></li>
                 </li>
